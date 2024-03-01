@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>商品一覧</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'jihanki/style.css' %}">
+</head>
+<body>
+<ul>
+  {% for product in products %}
+    <li>
+      <h2>{{ product.name }}</h2>
+      <p>価格：{{ product.price }}</p>
+      <p>在庫：{{ product.stock }}</p>
+      <a href="{% url 'buy_product' product.id %}">購入する</a>
+    </li>
+  {% endfor %}
+</ul>
+</body>
+</html>

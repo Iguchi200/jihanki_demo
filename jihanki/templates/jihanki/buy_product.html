@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>商品購入</title>
+</head>
+<body>
+<h1>{{ product.name }}を購入しました</h1>
+<p>価格：{{ product.price }}</p>
+<p><a href="{% url 'product_list' %}">商品一覧に戻る</a></p>
+</body>
+</html>
